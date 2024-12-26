@@ -32,6 +32,7 @@
         .person h2 {
             margin: 0 0 5px;
             color: #333;
+            cursor: pointer;
         }
         .person p {
             margin: 5px 0;
@@ -41,79 +42,89 @@
             margin: 20px 0;
             color: #666;
         }
+        .crossed {
+            text-decoration: line-through;
+            color: red;
+        }
     </style>
+    <script>
+        function toggleCrossOut(element) {
+            element.classList.toggle('crossed');
+        }
+    </script>
 </head>
 <body>
     <header>
         <h2>살인 사건의 범인을 찾아라! 각 4개의 미니게임을 통과하고 힌트를 얻어 범인을 추리하자</h2>
+        <h3>Tip: 용의자 이름을 눌러서 용의자 제외 시킬 수 있습니다</h3>
         <h1>용의자 정보</h1>
     </header>
     <div class="container">
         <div class="person">
-            <h2>김민수</h2>
+            <h2 onclick="toggleCrossOut(this)">김민수</h2>
             <p>성별: 남성</p>
             <p>나이: 27세</p>
             <p>키: 175cm</p>
             <p>특기: 셔플댄스</p>
         </div>
         <div class="person">
-            <h2>박지현</h2>
+            <h2 onclick="toggleCrossOut(this)">박지현</h2>
             <p>성별: 여성</p>
             <p>나이: 23세</p>
             <p>키: 165cm</p>
             <p>특기: 그림 그리기</p>
         </div>
         <div class="person">
-            <h2>이준호</h2>
+            <h2 onclick="toggleCrossOut(this)">이준호</h2>
             <p>성별: 남성</p>
             <p>나이: 31세</p>
             <p>키: 180cm</p>
             <p>특기: 수영</p>
         </div>
         <div class="person">
-            <h2>최유진</h2>
+            <h2 onclick="toggleCrossOut(this)">최유진</h2>
             <p>성별: 여성</p>
             <p>나이: 29세</p>
             <p>키: 168cm</p>
             <p>특기: 고양이 키우기</p>
         </div>
         <div class="person">
-            <h2>정승민</h2>
+            <h2 onclick="toggleCrossOut(this)">정승민</h2>
             <p>성별: 남성</p>
             <p>나이: 25세</p>
             <p>키: 172cm</p>
             <p>특기: 베이킹</p>
         </div>
         <div class="person">
-            <h2>한수연</h2>
+            <h2 onclick="toggleCrossOut(this)">한수연</h2>
             <p>성별: 여성</p>
             <p>나이: 24세</p>
             <p>키: 160cm</p>
             <p>특기: 유튜브 영상 편집</p>
         </div>
         <div class="person">
-            <h2>오다현</h2>
+            <h2 onclick="toggleCrossOut(this)">오다현</h2>
             <p>성별: 여성</p>
             <p>나이: 26세</p>
             <p>키: 162cm</p>
             <p>특기: 체스</p>
         </div>
         <div class="person">
-            <h2>강현우</h2>
+            <h2 onclick="toggleCrossOut(this)">강현우</h2>
             <p>성별: 남성</p>
             <p>나이: 28세</p>
             <p>키: 177cm</p>
             <p>특기: 피아노</p>
         </div>
         <div class="person">
-            <h2>이서영</h2>
+            <h2 onclick="toggleCrossOut(this)">이서영</h2>
             <p>성별: 여성</p>
             <p>나이: 30세</p>
             <p>키: 170cm</p>
             <p>특기: 마라톤</p>
         </div>
         <div class="person">
-            <h2>유재호</h2>
+            <h2 onclick="toggleCrossOut(this)">유재호</h2>
             <p>성별: 남성</p>
             <p>나이: 33세</p>
             <p>키: 182cm</p>
