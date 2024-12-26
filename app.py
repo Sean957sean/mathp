@@ -1,13 +1,13 @@
 from flask import Flask, send_from_directory
+import os
 
-# Flask application instance
 app = Flask(__name__)
 
-# Route to serve the HTML file
 @app.route("/")
-def serve_html():
+def home():
     return send_from_directory(".", "people_info_webpage.html")
 
-# Main function to run the server
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    # Render에서 제공하는 PORT 환경 변수를 사용
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
